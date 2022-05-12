@@ -199,6 +199,8 @@ const addText = (_sig, x, y, size) => {
 };
 
 const drawElement = (_renderObject, _index, _layersLen) => {
+  var imageSize = _renderObject.layer.name == "BADGE" ? 160: format.width;
+
   ctx.globalAlpha = _renderObject.layer.opacity;
   ctx.globalCompositeOperation = _renderObject.layer.blend;
   text.only
@@ -210,10 +212,10 @@ const drawElement = (_renderObject, _index, _layersLen) => {
       )
     : ctx.drawImage(
         _renderObject.loadedImage,
-        0,
-        0,
-        format.width,
-        format.height
+        imageSize == 160 ? 10 : 0,
+        imageSize == 160 ? 10 : 0,
+        imageSize,
+        imageSize
       );
 
   addAttributes(_renderObject);

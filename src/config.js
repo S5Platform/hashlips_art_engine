@@ -6,7 +6,7 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "Shoppy Collection";
-const description = "샤하";
+const description = "샤하! '샤피라이브 하이'라는 뜻";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
@@ -24,9 +24,11 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 100,
     layersOrder: [
-      { name: "BACKGROUND" }
+      { name: "BACKGROUND" },
+      { name: "BODY" },
+      { name: "BADGE" },
     ],
   },
 ];
@@ -36,8 +38,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 1478,
-  height: 1478,
+  width: 1024,
+  height: 1024,
   smoothing: false,
 };
 
